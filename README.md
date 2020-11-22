@@ -1,6 +1,5 @@
-# Spring Boot Jms Example
-> This is Spring Boot Activemq Artemis Example
->
+# Spring Boot Jms Example  
+This is Spring Boot Activemq Artemis Example  
 <img src="https://github.com/susimsek/spring-boot-jms-ex/blob/main/images/spring-boot-jms-ex.png" alt="Spring Boot Jms Example" width="100%" height="100%"/> 
 
 ## Prerequisites
@@ -37,7 +36,7 @@ docker-compose up -d
 
 http://localhost:8161/console
 
-username: admin
+username: admin  
 password: P@ssword
 
 <img src="https://github.com/susimsek/spring-boot-jms-ex/blob/main/images/artemis.png" alt="Spring Boot Artemis Dashboard" width="100%" height="100%"/>
