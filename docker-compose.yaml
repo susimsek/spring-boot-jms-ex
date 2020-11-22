@@ -1,0 +1,30 @@
+version: "3"
+services:
+  app:
+    build: .
+    container_name: app
+    restart: ${RESTART_POLICY}
+    environment:
+      - TZ
+      - SERVER_PORT
+      - ARTEMIS_HOST
+      - ARTEMIS_PORT
+      - ARTEMIS_USERNAME
+      - ARTEMIS_PASSWORD
+      - ACTIVE_PROFILE
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+
+  artemis:
+    image: vromero/activemq-artemis:2.15.0
+    container_name: artemis
+    restart: ${RESTART_POLICY}
+    environment:
+      - TZ
+      - ARTEMIS_USERNAME
+      - ARTEMIS_PASSWORD
+    ports:
+      - 8161:8161
+      - 61616:61616
+    volumes:
+      - ./data/artemis-data:/var/lib/artemis/data:Z
